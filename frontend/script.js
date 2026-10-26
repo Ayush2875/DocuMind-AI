@@ -1,5 +1,5 @@
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://documind-ai-ey5s.onrender.com";
 
 // PDF upload elements
 const pdfInput = document.getElementById("pdfInput");
