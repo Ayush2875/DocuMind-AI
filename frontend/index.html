@@ -1,0 +1,92 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuMind AI | Chat with Your PDF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">📚 DocuMind <span>AI</span></div>
+            <p>Chat with your documents intelligently</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- PDF Upload Section -->
+            <section class="upload-section">
+                <h2>Upload Your PDF</h2>
+                <p>Select a document to start asking questions.</p>
+
+                <input
+                    type="file"
+                    id="pdfInput"
+                    accept=".pdf,application/pdf"
+                    hidden
+                >
+
+                <button id="chooseFileBtn" class="primary-button">
+                    Choose PDF
+                </button>
+
+                <p id="fileName" class="file-name">No file selected</p>
+
+                <button id="uploadBtn" class="upload-button" disabled>
+                    Upload & Process
+                </button>
+
+                <p id="uploadStatus" class="status-message"></p>
+            </section>
+
+            <!-- Chat Section -->
+            <section class="chat-section">
+                <div class="chat-header">
+                    <div>
+                        <h2>Document Chat</h2>
+                        <p id="chatStatus">Upload a PDF to begin</p>
+                    </div>
+                </div>
+
+                <div id="chatMessages" class="chat-messages">
+                    <div class="message assistant-message">
+                        <div class="message-label">DocuMind AI</div>
+                        <p>Hello! Upload a PDF and I'll help you understand its contents.</p>
+                    </div>
+                </div>
+
+                <form id="chatForm" class="chat-input-area">
+                    <input
+                        type="text"
+                        id="questionInput"
+                        placeholder="Ask a question about your PDF..."
+                        autocomplete="off"
+                        disabled
+                    >
+
+                    <button type="submit" id="sendBtn" disabled>
+                        Send
+                    </button>
+                </form>
+
+                <p id="chatError" class="status-message"></p>
+            </section>
+
+        </main>
+
+        <footer class="app-footer">
+            <p>DocuMind AI · Built with FastAPI, Gemini and FAISS</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
